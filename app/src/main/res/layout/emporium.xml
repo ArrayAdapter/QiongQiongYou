@@ -1,9 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<TextView
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="商城"/>
-</LinearLayout>
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e7e1e1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#ffffff"
+            android:drawableLeft="@mipmap/ic_deal_search"
+            android:gravity="center_vertical"
+            android:text="搜索折扣"
+            android:textColor="#dfdcdc" />
+
+
+
+        <share.example.qiongyou.view.EmporiumMenuGridView
+            android:id="@+id/gridView_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:numColumns="5"
+            android:padding="15dp"
+            android:verticalSpacing="15dp" />
+
+        <android.support.percent.PercentRelativeLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/iv_meetingLeft"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:layout_widthPercent="49%" />
+
+            <ImageView
+                android:id="@+id/iv_meetingRightTop"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/iv_meetingLeft"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/iv_meetingRightBottom"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_below="@+id/iv_meetingRightTop"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/iv_meetingLeft"
+                android:scaleType="fitXY" />
+        </android.support.percent.PercentRelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linear_first"/>
+        <TextView
+            android:background="#ffffff"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="有好货"
+            android:gravity="center"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ece5e5"
+            />
+            <share.example.qiongyou.view.EmporiumMenuGridView
+                android:layout_width="match_parent"
+                android:background="#ffffff"
+               android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:numColumns="2"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                android:layout_height="match_parent"
+                android:id="@+id/gridView_goods"/>
+    </LinearLayout>
+</ScrollView>
